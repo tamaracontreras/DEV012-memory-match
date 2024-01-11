@@ -26,7 +26,7 @@
     "testEnvironment": "jsdom"
   },
   "bootcamp": {
-    "createdAt": "2024-01-11T21:24:49.537Z",
+    "createdAt": "2024-01-11T21:29:22.919Z",
     "version": "7.3.0",
     "commit": "8c435d72459f110c17f692a5a43fbfeabfdbf4b9"
   }
