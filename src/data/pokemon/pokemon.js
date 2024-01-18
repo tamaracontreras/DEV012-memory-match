@@ -1,4 +1,4 @@
-export default {
+export  const PokemonData =  {
   name: 'Pokemon',
   items: [
     { id: 'bulbasaur', image: 'https://www.serebii.net/pokemongo/pokemon/001.png', bgColor: '#339933' },
