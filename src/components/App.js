@@ -47,9 +47,9 @@ const App = () => {
     
 
         // Crea el elemento de nombre
-        const nombre = document.createElement('div');
-        nombre.classList.add('nombre');
-        nombre.textContent = vikingo.id;
+        // const nombre = document.createElement('div');
+        // nombre.classList.add('nombre');
+        // nombre.textContent = vikingo.id;
 
         // Agrega la imagen al contenedor de la imagen
 
@@ -59,7 +59,7 @@ const App = () => {
         cardContainer.appendChild(imgContainerDiv);
         imgContainerDiv.appendChild(imgElement);
  
-        imgContainerDiv.appendChild(nombre);
+        // imgContainerDiv.appendChild(nombre);
       
 
         // Agrega el contenedor de imagen y el contenedor de información al contenedor general
