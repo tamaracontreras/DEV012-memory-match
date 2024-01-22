@@ -7,6 +7,7 @@
 //
 // import { PokemonData } from '../data/pokemon/pokemon.js';
 import { Vikingos } from '../data/vikings/vikings.js';
+import { shuffleArray } from '../main.js';
 
 
 //
@@ -20,16 +21,33 @@ import { Vikingos } from '../data/vikings/vikings.js';
 //
 
 const App = () => {
+ 
+  const contenedor_principal = document.createElement('div');
+   contenedor_principal.classList.add('contenedor');
+
+   const contenedorboton = document.createElement('div');
+   contenedorboton.classList.add('contenedor_boton');
+   
+   const boton = document.createElement('button');
+    boton.classList.add('revolver');
+    boton.textContent = 'Shuffle';
+
   
-  const el = document.createElement('div');
-  el.classList.add('contenedor');
- // ota forma es hacer una copia del array con 
+ // otra forma es hacer una copia del array con 
  // Vikingos.items = [...Vikingos.items, ...Vikingos.items];
-  
+ function barajarCartas() {
+  shuffleArray(Vikingos.items);
+ 
+  contenedor_principal.innerHTML = '';
     for (let i = 0; i < 2; i++) {
     Vikingos.items.forEach(vikingo => {
+      
      
 // console.log(Vikingos.items.length)
+
+// Dentro del bucle, se crea un contenedor para cada carta,
+// se establecen las propiedades de la imagen y se agregan
+//  al contenedor principal.
 
   // Crea un contenedor general
     const cardContainer = document.createElement('div');
@@ -45,19 +63,26 @@ const App = () => {
     imgElement.setAttribute('alt', vikingo.id);
     imgElement.setAttribute('id', 'imagen');
 
- // Crea el contenedor de información
-    const infoContainerDiv = document.createElement('div');
-    infoContainerDiv.classList.add('info-container');
 
-    
-  el.appendChild(cardContainer);
-  cardContainer.appendChild(imgContainerDiv);
-  imgContainerDiv.appendChild(imgElement)
+  
+  contenedor_principal.appendChild(cardContainer);
+   cardContainer.appendChild(imgContainerDiv);
+  imgContainerDiv.appendChild(imgElement);
+  contenedor_principal.appendChild(contenedorboton);
+  contenedorboton.appendChild(boton)
+
 
       
     });
+    
   }
-    return el;
+  }
+   // Agrega el evento de clic al botón
+   boton.addEventListener('click', barajarCartas);
+
+   // Baraja las cartas inicialmente
+   barajarCartas();
+    return contenedor_principal;
 };
 
     
@@ -65,3 +90,4 @@ const App = () => {
 
 
 export default App;
+
