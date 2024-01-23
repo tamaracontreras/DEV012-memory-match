@@ -1,6 +1,6 @@
 import App from './components/App.js';
 // import  PokemonData from './components/App.js';
-import Vikingos  from './components/App.js';
+// import Vikingos  from './components/App.js';
 
 // Función para barajar 
 export function shuffleArray(array) {
@@ -20,8 +20,21 @@ export function shuffleArray(array) {
 //   las mezcla de una manera similar a mezclar juguetes en una fila.
   
 
-document.getElementById('root').appendChild(App(Vikingos));
+document.getElementById('root').appendChild(App());
 //, la línea completa está seleccionando un elemento en el documento HTML con el
-//  id 'root' y luego agregando un nuevo nodo al final de sus hijos. Este nuevo nodo 
-//  es el resultado de llamar a la función App con Vikingos como argumento.
+//  id 'root' y luego agregando un nuevo nodo al final de sus hijos. 
 
+export function cambiarEstilosCarta(event) {
+    // Obtiene el contenedor de la carta actual
+    const cardContainer =  event.currentTarget;
+
+    // Obtiene los contenedores de imagen y dorso dentro de la carta actual
+    const imgContainerDiv = cardContainer.querySelector('.img-container');
+    const containerDorso = cardContainer.querySelector('.dorso-container');
+
+    // Cambia los estilos
+    imgContainerDiv.style.display = 'flex';
+    containerDorso.style.display = 'none';
+    
+  }
+  
