@@ -1,3 +1,6 @@
+
+<img src="./Imagenes/intro.png" alt="Intro" width="800"/>
+
 # Memoria Nórdica
 
 Te embarcarás en un viaje único, donde la memoria se convierte en tu mayor aliada. El juego de cartas Memoria Nórdica desafiará tu destreza mental mientras encuentras las parejas de símbolos vikingos iguales para completar el tablero.
@@ -16,10 +19,10 @@ Encuentra las parejas de símbolos vikingos iguales para completar el tablero y 
 ## Capturas de Pantalla
 
 <img src="./Imagenes/memo1.png" alt="Inicio" width="600"/>
-<p align="center">Inicio del Juego</p>
+<p align="left">Inicio del Juego</p>
 
 <img src="./Imagenes/memo2.png" alt="Encuentra los símbolos" width="600"/>
-<p align="center">Encuentra los símbolos</p>
+<p align="left">Encuentra los símbolos</p>
 
 
 ## Instalación
