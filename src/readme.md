@@ -1,5 +1,5 @@
 
-<img src="./Imagenes/intro.png" alt="Intro" width="800"/>
+<img src="./Imagenes/intro.jpg" alt="Intro" width="800"/>
 
 # Memoria Nórdica
 
