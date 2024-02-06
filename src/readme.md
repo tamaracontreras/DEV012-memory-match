@@ -11,7 +11,7 @@ Encuentra las parejas de símbolos vikingos iguales para completar el tablero y 
 
 ## Instrucciones de Uso
 
-- Haz clic en las cartas para voltearlas.
+- Haz click en las cartas para voltearlas.
 - Encuentra las parejas de símbolos idénticos.
 - Utiliza el botón de shuffle para iniciar un nuevo juego.
 
@@ -39,16 +39,15 @@ Si deseas contribuir al proyecto, sigue estos pasos:
 3. Realiza tus cambios y crea un pull request.
 
 
-
 ## Contacto
 
-tacs.laboral@gmail.com 
+tacs.laboral@gmail.com <br>
 www.linkedin.com/in/tamara-contreras
 
 
 ## Agradecimientos
 
-imágenes: https://www.bing.com/images/create?
-Al equipo de Laboratoria por su apoyo eterno: www.laboratoria.la <3
-A mis padres <3 
+imágenes: https://www.bing.com/images/create? <br>
+Al equipo de Laboratoria por su apoyo eterno: www.laboratoria.la <3<br>
+A mis padres <3 <br>
 Much@s amigos y conocid@s que me motivaron a que persistiera.
