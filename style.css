@@ -5,37 +5,61 @@
 
 header {
   width: 100%;
-
-  background: rgba(136, 219, 226, 0.4);
+  background: rgba(208, 230, 232, 0.4);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: absolute;
   top: 0;
   display: flex;
   justify-content: row;
   align-items: center;
-  gap: 30px;
-  display: inline-block;
+  display: block;
 }
 
 .contenido {
-  padding: 20px;
-  font-size: 30px;
-  margin-top: 20px;
+  padding: 10px;
+  font-size: 26px;
   font-family: "Protest Revolution", sans-serif;
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
 .instrucciones {
   display: block;
-  margin-top: 150px;
+  margin-top: 70px;
   height: 140px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
   padding: 50px;
-
 }
 
 h1,
@@ -112,11 +136,29 @@ h3 {
 }
 .revolver {
   height: 50px;
-  width: 100px;
+  width: 250px;
   font-size: 15px;
+  background:rgba(208, 230, 232, 0.4);
+  box-shadow: 6px 6px 20px -1px #acb8c9,
+             -6px -6px 20px -1px #e8f8ff;
+  border: none;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  color: rgb(50, 115, 115);
+  font-size: 20px;
+  font-weight:700;
+}
+.revolver:hover{
+  box-shadow: inset 4px 4px 10px -1px rgba(0, 0, 0, 0.15),
+        inset -4px -4px 10px -1px rgba(255, 255, 255, 0.7);
+
 }
 .contenedorPuntuacion {
   display: flex;
   justify-content: center;
-
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
+
+
+
