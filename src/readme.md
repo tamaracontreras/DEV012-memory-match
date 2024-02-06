@@ -15,10 +15,10 @@ Encuentra las parejas de símbolos vikingos iguales para completar el tablero y 
 
 ## Capturas de Pantalla
 
-<img src="imagenes/memo1.png" alt="Inicio" width="400"/>
+<img src="./Imagenes/memo1.png" alt="Inicio" width="400"/>
 <p align="center">Inicio del Juego</p>
 
-<img src="imagenes/memo2.png" alt="Encuentra los símbolos" width="400"/>
+<img src="./Imagenes/memo2.png" alt="Encuentra los símbolos" width="400"/>
 <p align="center">Encuentra los símbolos</p>
 
 
@@ -35,9 +35,7 @@ Si deseas contribuir al proyecto, sigue estos pasos:
 2. Crea una rama con un nombre descriptivo.
 3. Realiza tus cambios y crea un pull request.
 
-## Licencia
 
-(Especifica la licencia bajo la cual se distribuye tu juego)
 
 ## Contacto
 
@@ -47,7 +45,7 @@ www.linkedin.com/in/tamara-contreras
 
 ## Agradecimientos
 
-(imágenes: https://www.bing.com/images/create?
- Al equipo de Laboratoria por su apoyo eterno: www.laboratoria.la <3
- A mis padres <3 
- much@s amigos y conocid@s que me motivaron a que persistiera)
+imágenes: https://www.bing.com/images/create?
+Al equipo de Laboratoria por su apoyo eterno: www.laboratoria.la <3
+A mis padres <3 
+Much@s amigos y conocid@s que me motivaron a que persistiera.
