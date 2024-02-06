@@ -18,28 +18,35 @@ import { mostrarCarta, shuffleArray, ocultarCarta} from "../main.js";
 //   .catch(console.error);
 
 export const App = () => {
+  
   let cartaGuardada = "";
   let cartaGuardadaDos = "";
   let objetoGuardado = "";
   let objetoGuardadoDos = "";
   let puntos = 0;
-  alert('Haz click para empezar a Jugar!');
-
-  const contenedor_principal = document.createElement("div");
-
-  contenedor_principal.classList.add("contenedor");
-  
+  //contenedor para la puntuacion
+  const contNuevoH1 = document.createElement('div');
+  contNuevoH1.classList.add('contenedorPuntuacion');
+  // elemento h1 que indica la puntuacion
   const nuevoH1 = document.createElement("h1");
   nuevoH1.classList.add('puntuacion');
   nuevoH1.textContent = "Puntuación: " + puntos;
-
-
   const contenedorboton = document.createElement("div");
   contenedorboton.classList.add("contenedor_boton");
 
   const boton = document.createElement("button");
   boton.classList.add("revolver");
   boton.textContent = "Shuffle";
+
+  const contenedor_principal = document.createElement("div");
+
+  contenedor_principal.classList.add("contenedor");
+
+  
+
+  //contador de puntos
+ 
+
   boton.addEventListener("click", barajarYCrearCartas);
 
   function barajarYCrearCartas() {
@@ -80,9 +87,12 @@ export const App = () => {
       imgElement.setAttribute("alt", Vikingos.copia[i].id);
       imgElement.setAttribute("id", "imagen");
 
+     
       contenedor_principal.appendChild(cardContainer);
-      contenedor_principal.appendChild(nuevoH1);
-
+     
+      contenedor_principal.appendChild(contNuevoH1);
+       contNuevoH1.appendChild(nuevoH1);
+      
       cardContainer.appendChild(imgContainerDiv);
       imgContainerDiv.appendChild(imgElement);
 
