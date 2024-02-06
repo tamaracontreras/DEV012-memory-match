@@ -15,10 +15,10 @@ Encuentra las parejas de símbolos vikingos iguales para completar el tablero y 
 
 ## Capturas de Pantalla
 
-<img src="./Imagenes/memo1.png" alt="Inicio" width="400"/>
+<img src="./Imagenes/memo1.png" alt="Inicio" width="600"/>
 <p align="center">Inicio del Juego</p>
 
-<img src="./Imagenes/memo2.png" alt="Encuentra los símbolos" width="400"/>
+<img src="./Imagenes/memo2.png" alt="Encuentra los símbolos" width="600"/>
 <p align="center">Encuentra los símbolos</p>
 
 
