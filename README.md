@@ -1,3 +1,6 @@
+
+<img src="./Imagenes/intro.jpg" alt="Intro" width="800"/>
+
 # Memoria Nórdica
 
 Te embarcarás en un viaje único, donde la memoria se convierte en tu mayor aliada. El juego de cartas Memoria Nórdica desafiará tu destreza mental mientras encuentras las parejas de símbolos vikingos iguales para completar el tablero.
@@ -8,18 +11,18 @@ Encuentra las parejas de símbolos vikingos iguales para completar el tablero y 
 
 ## Instrucciones de Uso
 
-- Haz clic en las cartas para voltearlas.
+- Haz click en las cartas para voltearlas.
 - Encuentra las parejas de símbolos idénticos.
 - Utiliza el botón de shuffle para iniciar un nuevo juego.
 
 
 ## Capturas de Pantalla
 
-<img src="imagenes/memo1.png" alt="Inicio" width="400"/>
-<p align="center">Inicio del Juego</p>
+<img src="./Imagenes/memo1.png" alt="Inicio" width="600"/>
+<p align="left">Inicio del Juego</p>
 
-<img src="imagenes/memo2.png" alt="Encuentra los símbolos" width="400"/>
-<p align="center">Encuentra los símbolos</p>
+<img src="./Imagenes/memo2.png" alt="Encuentra los símbolos" width="600"/>
+<p align="left">Encuentra los símbolos</p>
 
 
 ## Instalación
@@ -35,19 +38,16 @@ Si deseas contribuir al proyecto, sigue estos pasos:
 2. Crea una rama con un nombre descriptivo.
 3. Realiza tus cambios y crea un pull request.
 
-## Licencia
-
-(Especifica la licencia bajo la cual se distribuye tu juego)
 
 ## Contacto
 
-tacs.laboral@gmail.com 
+tacs.laboral@gmail.com <br>
 www.linkedin.com/in/tamara-contreras
 
 
 ## Agradecimientos
 
-(imágenes: https://www.bing.com/images/create?
- Al equipo de Laboratoria por su apoyo eterno: www.laboratoria.la <3
- A mis padres <3 
- much@s amigos y conocid@s que me motivaron a que persistiera)
+imágenes: https://www.bing.com/images/create? <br>
+Al equipo de Laboratoria por su apoyo eterno: www.laboratoria.la <3<br>
+A mis padres <3 <br>
+Much@s amigos y conocid@s que me motivaron a que persistiera.
