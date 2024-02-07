@@ -73,7 +73,7 @@ export const App = () => {
       // Crea el elemento de imagen de Dorso
       const imgDorso = document.createElement("img");
       imgDorso.classList.add("imagenDorso");
-      imgDorso.setAttribute("src", "/Imagenes/dorso.jpg");
+      imgDorso.setAttribute("src", "./Imagenes/dorso.jpg");
       imgDorso.setAttribute("alt", "rubik");
 
       // Crea un contenedor para la imagen
