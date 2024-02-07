@@ -22,9 +22,9 @@ export const App = () => {
   let objetoGuardado = "";
   let objetoGuardadoDos = "";
   let puntos = 0;
+const contenedorGeneral = document.createElement("div");
+contenedorGeneral.classList.add("contenedorGeneral");
 
-  const contenedorTotal = document.createElement("div");
-  contenedorTotal.classList.add("contenedor-total");
   //contenedor para la puntuacion
   const contNuevoH1 = document.createElement("div");
   contNuevoH1.classList.add("contenedorPuntuacion");
@@ -32,18 +32,25 @@ export const App = () => {
   const nuevoH1 = document.createElement("h1");
   nuevoH1.classList.add("puntuacion");
   nuevoH1.textContent = "Puntuación: " + puntos;
+
+  contenedorGeneral.appendChild(contNuevoH1);
+  contNuevoH1.appendChild(nuevoH1);
+  
+
   const contenedorboton = document.createElement("div");
   contenedorboton.classList.add("contenedor_boton");
+  
 
   const boton = document.createElement("button");
   boton.classList.add("revolver");
   boton.textContent = "Shuffle";
+  contenedorGeneral.appendChild(contenedorboton);
+  contenedorboton.appendChild(boton);
+  
 
   const contenedor_principal = document.createElement("div");
-
   contenedor_principal.classList.add("contenedor");
 
-  //contador de puntos
 
   boton.addEventListener("click", barajarYCrearCartas);
 
@@ -57,6 +64,7 @@ export const App = () => {
 
   function renderizarCartas() {
     contenedor_principal.innerHTML = "";
+    
     shuffleArray(Vikingos.copia);
     for (let i = 0; i < 18; i++) {
       // Dentro del bucle, se crea un contenedor para cada carta,
@@ -73,7 +81,7 @@ export const App = () => {
       // Crea el elemento de imagen de Dorso
       const imgDorso = document.createElement("img");
       imgDorso.classList.add("imagenDorso");
-      imgDorso.setAttribute("src", "/Imagenes/dorso.jpg");
+      imgDorso.setAttribute("src", "./Imagenes/dorso.jpg");
       imgDorso.setAttribute("alt", "rubik");
 
       // Crea un contenedor para la imagen
@@ -86,35 +94,21 @@ export const App = () => {
       imgElement.setAttribute("src", Vikingos.copia[i].image);
       imgElement.setAttribute("alt", Vikingos.copia[i].id);
       imgElement.setAttribute("id", "imagen");
-    
 
-      contenedorTotal.appendChild(contNuevoH1);
-      contNuevoH1.appendChild(nuevoH1);
-      contenedorTotal.appendChild(contenedor_principal);
-     
-      contenedor_principal.appendChild(cardContainer);
-
-      
 
       cardContainer.appendChild(imgContainerDiv);
       imgContainerDiv.appendChild(imgElement);
 
       cardContainer.appendChild(containerDorso);
       containerDorso.appendChild(imgDorso);
-
-      contenedor_principal.appendChild(contenedorboton);
-      contenedorboton.appendChild(boton);
-
-      // Agrega el evento de clic a cada carta
-
-      // cardContainer.addEventListener("click", cambiarEstilosCarta);
+      contenedor_principal.appendChild(cardContainer);
 
       cardContainer.addEventListener("click", function (e) {
         if (cartaGuardada === "") {
           cartaGuardada = Vikingos.copia[i].id;
           // guarda el objeto seleccionado del primer click (cardContainer) aplicando la funcion mostrarCarta
           objetoGuardado = mostrarCarta(e);
-
+          console.log(cartaGuardada);
           console.log(objetoGuardado);
           console.log("cartauno");
           // con el return termina la ejecucion de esta funcion
@@ -148,14 +142,18 @@ export const App = () => {
 
         cartaGuardada = "";
         cartaGuardadaDos = "";
-     
-
-
-      
       });
+    
     }
+    contenedorGeneral.appendChild(contenedor_principal);
+    // contenedor_principal.appendChild(contenedorboton);
+    // contenedorboton.appendChild(boton);
+
+    // Agrega el evento de clic a cada carta
+
+    // cardContainer.addEventListener("click", cambiarEstilosCarta);
   }
   barajarYCrearCartas();
 
-  return contenedor_principal;
+  return contenedorGeneral;
 };

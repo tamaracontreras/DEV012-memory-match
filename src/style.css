@@ -22,34 +22,12 @@ header {
   padding: 10px;
   font-size: 26px;
   font-family: "Protest Revolution", sans-serif;
-  -webkit-animation-name: slideInLeft;
-  animation-name: slideInLeft;
+  -webkit-animation: text-focus-in 2s linear 1s both;
+  animation: text-focus-in 2s linear 1s both;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
-@-webkit-keyframes slideInLeft {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-@keyframes slideInLeft {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
 }
 
 .instrucciones {
@@ -59,13 +37,38 @@ header {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
-  padding: 50px;
+  padding: 50px 50px 0px;
+  -webkit-animation: text-focus-in 2s linear 1s both;
+  animation: text-focus-in 2s linear 1s both;
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
 
 h1,
 h3 {
   color: rgb(50, 115, 115);
-
   text-align: center;
   margin-top: 25px;
 }
@@ -86,13 +89,15 @@ h3 {
   margin-right: 100px;
   align-items: center;
   width: 1200px;
+  margin-top: 30px;
 }
 
 .card-container {
   width: 150px;
   height: 190px;
   background-color: gray;
-  margin: 10px;
+  margin: 15px;
+  
   border-radius: 20px 0px 20px 0px;
   -webkit-box-shadow: 5px 21px 39px 2px rgba(117, 119, 150, 1);
   -moz-box-shadow: 5px 21px 39px 2px rgba(117, 119, 150, 1);
@@ -129,36 +134,34 @@ h3 {
 
 .contenedor_boton {
   display: flex;
-  padding: 5px;
+
   justify-content: center;
   width: 100%;
   margin-top: 0px;
 }
 .revolver {
   height: 50px;
-  width: 250px;
+  width: 150px;
   font-size: 15px;
-  background:rgba(208, 230, 232, 0.4);
-  box-shadow: 6px 6px 20px -1px #acb8c9,
-             -6px -6px 20px -1px #e8f8ff;
+  background: rgba(208, 230, 232, 0.4);
+  box-shadow: 6px 6px 20px -1px #acb8c9, -6px -6px 20px -1px #e8f8ff;
   border: none;
-  margin-bottom: 30px;
   border-radius: 20px;
   color: rgb(50, 115, 115);
   font-size: 20px;
-  font-weight:700;
+  font-weight: 700;
 }
-.revolver:hover{
+.revolver:hover {
   box-shadow: inset 4px 4px 10px -1px rgba(0, 0, 0, 0.15),
-        inset -4px -4px 10px -1px rgba(255, 255, 255, 0.7);
-
+    inset -4px -4px 10px -1px rgba(255, 255, 255, 0.7);
 }
 .contenedorPuntuacion {
   display: flex;
   justify-content: center;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
+  padding: 0px 0px 20px;
 }
-
-
-
+.contenedorPuntuacion h1 {
+  margin: 0px;
+}
