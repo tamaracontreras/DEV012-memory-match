@@ -1,4 +1,5 @@
-.DS_Store
-*.swp
+# Ignorar la carpeta de cobertura
 coverage/
+
+# Ignorar la carpeta de módulos de Node.js
 node_modules/

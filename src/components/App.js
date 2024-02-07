@@ -3,8 +3,7 @@
 //
 // import { PokemonData } from '../data/pokemon/pokemon.js';
 import { Vikingos } from "../data/vikings/vikings.js";
-import { mostrarCarta, shuffleArray, ocultarCarta} from "../main.js";
-
+import { mostrarCarta, shuffleArray, ocultarCarta } from "../main.js";
 
 // import { buscarCartaPorId } from "../main.js";
 
@@ -18,18 +17,20 @@ import { mostrarCarta, shuffleArray, ocultarCarta} from "../main.js";
 //   .catch(console.error);
 
 export const App = () => {
-  
   let cartaGuardada = "";
   let cartaGuardadaDos = "";
   let objetoGuardado = "";
   let objetoGuardadoDos = "";
   let puntos = 0;
+
+  const contenedorTotal = document.createElement("div");
+  contenedorTotal.classList.add("contenedor-total");
   //contenedor para la puntuacion
-  const contNuevoH1 = document.createElement('div');
-  contNuevoH1.classList.add('contenedorPuntuacion');
+  const contNuevoH1 = document.createElement("div");
+  contNuevoH1.classList.add("contenedorPuntuacion");
   // elemento h1 que indica la puntuacion
   const nuevoH1 = document.createElement("h1");
-  nuevoH1.classList.add('puntuacion');
+  nuevoH1.classList.add("puntuacion");
   nuevoH1.textContent = "Puntuación: " + puntos;
   const contenedorboton = document.createElement("div");
   contenedorboton.classList.add("contenedor_boton");
@@ -42,14 +43,13 @@ export const App = () => {
 
   contenedor_principal.classList.add("contenedor");
 
-  
-
   //contador de puntos
- 
 
   boton.addEventListener("click", barajarYCrearCartas);
 
   function barajarYCrearCartas() {
+    puntos = 0;
+    nuevoH1.textContent = "Puntuación: " + puntos;
     Vikingos.copia = [...Vikingos.items, ...Vikingos.items];
     shuffleArray(Vikingos.copia);
     renderizarCartas();
@@ -86,13 +86,16 @@ export const App = () => {
       imgElement.setAttribute("src", Vikingos.copia[i].image);
       imgElement.setAttribute("alt", Vikingos.copia[i].id);
       imgElement.setAttribute("id", "imagen");
+    
 
+      contenedorTotal.appendChild(contNuevoH1);
+      contNuevoH1.appendChild(nuevoH1);
+      contenedorTotal.appendChild(contenedor_principal);
      
       contenedor_principal.appendChild(cardContainer);
-     
-      contenedor_principal.appendChild(contNuevoH1);
-       contNuevoH1.appendChild(nuevoH1);
+
       
+
       cardContainer.appendChild(imgContainerDiv);
       imgContainerDiv.appendChild(imgElement);
 
@@ -107,8 +110,6 @@ export const App = () => {
       // cardContainer.addEventListener("click", cambiarEstilosCarta);
 
       cardContainer.addEventListener("click", function (e) {
-      
-
         if (cartaGuardada === "") {
           cartaGuardada = Vikingos.copia[i].id;
           // guarda el objeto seleccionado del primer click (cardContainer) aplicando la funcion mostrarCarta
@@ -118,9 +119,8 @@ export const App = () => {
           console.log("cartauno");
           // con el return termina la ejecucion de esta funcion
           return;
-
         }
-        
+
         if (cartaGuardadaDos === "") {
           cartaGuardadaDos = Vikingos.copia[i].id;
           objetoGuardadoDos = mostrarCarta(e);
@@ -128,30 +128,30 @@ export const App = () => {
           console.log("cartados");
         }
 
-
         if (cartaGuardada !== cartaGuardadaDos) {
           console.log("Son distintos!");
           setTimeout(function () {
-          ocultarCarta(objetoGuardado);
-          ocultarCarta(objetoGuardadoDos)}, 2000);
-
-        } else{
-          puntos = puntos + 1
+            ocultarCarta(objetoGuardado);
+            ocultarCarta(objetoGuardadoDos);
+          }, 1000);
+        } else {
+          puntos = puntos + 1;
           nuevoH1.textContent = "Puntuación: " + puntos;
           //puntos++
           //puntos+=1
         }
-          cartaGuardada = "";
-          cartaGuardadaDos = "";
-          
+        // Después de incrementar los puntos, verifica si la puntuación alcanza diez
+        if (puntos === 10) {
+          // Muestra un alert indicando que el juego ha terminado
+          alert("¡Felicitaciones! Has completado el juego.");
+        }
 
-   
+        cartaGuardada = "";
+        cartaGuardadaDos = "";
+     
 
-        //comparar ambas cartas
-        //paso dos : si son iguales mostrar las imagenes
-        //si son diferentes dejarlas ocultas
-        //resetear los valores de las cartaGuardada ='', cartaGuardadaDos ='',
-        
+
+      
       });
     }
   }
