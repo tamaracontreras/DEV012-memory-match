@@ -32,30 +32,25 @@ header {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
-  padding: 50px 50px 0px;
-  -webkit-animation: text-focus-in 2s linear 1s both;
+  padding: 0px 30px 0px 0px;
   animation: text-focus-in 2s linear 1s both;
 }
-@-webkit-keyframes text-focus-in {
+@keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
     filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
   }
 }
 @keyframes text-focus-in {
   0% {
-    -webkit-filter: blur(12px);
     filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
   }
