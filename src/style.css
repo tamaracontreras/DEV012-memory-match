@@ -22,12 +22,7 @@ header {
   padding: 10px;
   font-size: 26px;
   font-family: "Protest Revolution", sans-serif;
-  -webkit-animation: text-focus-in 2s linear 1s both;
-  animation: text-focus-in 2s linear 1s both;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  
 }
 
 .instrucciones {

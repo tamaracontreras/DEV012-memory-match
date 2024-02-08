@@ -135,7 +135,7 @@ contenedorGeneral.classList.add("contenedorGeneral");
           //puntos+=1
         }
         // Después de incrementar los puntos, verifica si la puntuación alcanza diez
-        if (puntos === 10) {
+        if (puntos === 9) {
           // Muestra un alert indicando que el juego ha terminado
           alert("¡Felicitaciones! Has completado el juego.");
         }
