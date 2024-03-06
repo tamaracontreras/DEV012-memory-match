@@ -47,7 +47,6 @@ www.linkedin.com/in/tamara-contreras
 
 ## Agradecimientos
 
-imágenes: https://www.bing.com/images/create? <br>
 Al equipo de Laboratoria por su apoyo eterno: www.laboratoria.la <3<br>
 A mis padres <3 <br>
 Much@s amigos y conocid@s que me motivaron a que persistiera.
